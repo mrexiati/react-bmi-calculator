@@ -9,21 +9,30 @@ const Info = ({ weight, height, id, date, bmi, deleteCard}) => {
     return (
         <div className="col m6 s12">
             <div className="card">
-                <div className="">
-                    <span className="">
+                <div className="card-content">
+                    <span className="card-title" data-testid="bmi-value">
                         BMI: {bmi}
                     </span>
-                    <div className="">
-                        <span>Weight: {weight}</span>
-                        <span>Height: {height}</span>
-                        <span>Date: {date}</span>
+                    <div className="card-data">
+                        <span data-testid="weight-value">Weight: {weight} kg</span>
+                        <span data-testid="height-value">Height: {height} cm</span>
+                        <span data-testid="date-value">Date: {date}</span>
                     </div>
 
-                    <button className="" onClick={handleDelete}>X</button>
+                    <button className="delete-btn" onClick={handleDelete}>X</button>
                 </div>
            </div>
         </div>
     );
+};
+
+Info.PropTypes = {
+    weight: PropTypes.string,
+    height: PropTypes.string,
+    id: PropTypes.string,
+    date: PropTypes.string,
+    bmi: PropTypes.string,
+    deleteCard: PropTypes.func
 };
 
 export default Info;
