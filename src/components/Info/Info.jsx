@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import '../App/App.css'
 
 const Info = ({ weight, height, id, date, bmi, deleteCard}) => {
     const handleDelete = () => {
