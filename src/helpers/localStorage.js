@@ -10,7 +10,7 @@ export const getData = (key) => {
     }
 };
 
-export const setData = (key, item) => {
+export const storeData = (key, item) => {
     if(!localStorage) {
         return;
     }

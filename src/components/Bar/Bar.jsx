@@ -75,7 +75,7 @@ const Bar = ({labelData, bmiData}) => {
 
     return (
         <>
-        <Line data={data} options={options} />
+            <Line data={data} options={options} />
         </>
     );
 };
